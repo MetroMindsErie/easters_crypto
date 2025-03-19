@@ -1,18 +1,23 @@
-const { initializeBlockchain } = require('./core/blockchain/blockchainService');
-const { TokenManager } = require('./core/tokenization/tokenManager');
-const { SmartContractService } = require('./core/smartContracts/smartContractService');
-const { DomainResolver } = require('./core/domains/domainResolver');
-const { configurePlugin } = require('./config/configService');
+import { initializeBlockchain } from './core/blockchain/blockchainService.js';
+import { TokenManager } from './core/tokenization/tokenManager.js';
+import { SmartContractService } from './core/smartContracts/smartContractService.js';
+import { DomainResolver } from './core/domains/domainResolver.js';
+import { configurePlugin } from './config/configService.js';
 
 // UI Components (Optional)
-const UI = {
-  VerificationBadge: require('./ui/verification/VerificationBadge'),
-  TokenDisplay: require('./ui/tokenDisplay/TokenDisplay'),
-  DomainInfoPanel: require('./ui/domainInfo/DomainInfoPanel')
-};
+import VerificationBadge from './ui/verification/VerificationBadge.js';
+import TokenDisplay from './ui/tokenDisplay/TokenDisplay.js';
+import DomainInfoPanel from './ui/domainInfo/DomainInfoPanel.js';
 
 // API Routes
-const apiRoutes = require('./api/routes');
+import apiRoutes from './api/routes.js';
+
+// UI Components object for conditional export
+const UI = {
+  VerificationBadge,
+  TokenDisplay,
+  DomainInfoPanel
+};
 
 /**
  * Initialize the Easter's Crypto plugin
@@ -55,7 +60,7 @@ function initEastersCrypto(config = {}) {
   };
 }
 
-module.exports = {
+export {
   initEastersCrypto,
   UI
 };

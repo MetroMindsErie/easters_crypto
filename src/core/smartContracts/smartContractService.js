@@ -1,6 +1,6 @@
-const { ethers } = require('ethers');
-const PROPERTY_MARKETPLACE_ABI = require('./abis/PropertyMarketplace.json');
-const FRACTIONAL_REGISTRY_ABI = require('./abis/FractionalRegistry.json');
+import { ethers } from 'ethers';
+import PROPERTY_MARKETPLACE_ABI from './abis/PropertyMarketplace.json' assert { type: 'json' };
+import FRACTIONAL_REGISTRY_ABI from './abis/FractionalRegistry.json' assert { type: 'json' };
 
 /**
  * Service for deploying and interacting with smart contracts
@@ -205,6 +205,6 @@ class SmartContractService {
   }
 }
 
-module.exports = {
+export {
   SmartContractService
 };

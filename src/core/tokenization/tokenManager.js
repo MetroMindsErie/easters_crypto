@@ -1,6 +1,6 @@
-const { ethers } = require('ethers');
-const ERC721_ABI = require('./abis/ERC721.json');
-const ERC1155_ABI = require('./abis/ERC1155.json');
+import { ethers } from 'ethers';
+import ERC721_ABI from './abis/ERC721.json' assert { type: 'json' };
+import ERC1155_ABI from './abis/ERC1155.json' assert { type: 'json' };
 
 /**
  * Manages tokenization operations for real estate assets
@@ -186,6 +186,6 @@ class TokenManager {
   }
 }
 
-module.exports = {
+export {
   TokenManager
 };

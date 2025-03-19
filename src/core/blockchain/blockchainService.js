@@ -1,5 +1,5 @@
-const { ethers } = require('ethers');
-const Web3 = require('web3');
+import { ethers } from 'ethers';
+import Web3 from 'web3';
 
 /**
  * BlockchainProvider handles connection to blockchain networks
@@ -100,7 +100,7 @@ function initializeBlockchain(config = {}) {
   return new BlockchainProvider(finalConfig);
 }
 
-module.exports = {
+export {
   initializeBlockchain,
   BlockchainProvider
 };

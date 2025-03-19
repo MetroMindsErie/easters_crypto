@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 /**
  * Verification Badge Component
@@ -73,4 +73,4 @@ const VerificationBadge = ({
   );
 };
 
-module.exports = VerificationBadge;
+export default VerificationBadge;

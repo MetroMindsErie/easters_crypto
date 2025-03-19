@@ -1,7 +1,7 @@
-const { ethers } = require('ethers');
-const contentHash = require('content-hash');
-const ENS_REGISTRY_ABI = require('./abis/ENSRegistry.json');
-const ENS_RESOLVER_ABI = require('./abis/ENSPublicResolver.json');
+import { ethers } from 'ethers';
+import contentHash from 'content-hash';
+import ENS_REGISTRY_ABI from './abis/ENSRegistry.json' assert { type: 'json' };
+import ENS_RESOLVER_ABI from './abis/ENSPublicResolver.json' assert { type: 'json' };
 
 /**
  * Domain resolver for crypto domains (.eth, .crypto, etc.)
@@ -226,6 +226,6 @@ class DomainResolver {
   }
 }
 
-module.exports = {
+export {
   DomainResolver
 };
