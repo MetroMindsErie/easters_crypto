@@ -1,6 +1,6 @@
 {
   "name": "easters-crypto",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Modular backend service for tokenization and smart contracts in real estate applications",
   "type": "module",
   "main": "dist/index.js",
